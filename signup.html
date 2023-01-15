@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png" type="image/x-icon" class="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/solid.min.css">
+    <link rel="stylesheet" href="signup.css">
+    <title>Signup</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="content-left">
+
+            <form action="#" class="form">
+                <h2>REGISTER YOUR ACCOUNT</h2>
+
+                <div class="firstname same">
+                   <label for="firstName">First Name :</label>
+                   <i class="fa-solid fa-user"></i>
+                   <input type="text" id="firstName" name="firstName" class="firstName" pattern="[A-Za-z]{3,20}" required>
+                </div>
+
+                <div class="lastname same">
+                    <label for="lastName">Last Name :</label>
+                   <i class="fa-solid fa-user"></i>
+                    <input type="text" id="lastName" name="lastName" pattern="[A-Za-z]{3,20}" required>
+                </div>
+
+                <div class="email same">
+                    <label for="email">Email :</label>
+                    <i class="fa-regular fa-envelopes"></i>
+                    <i class="fa-solid fa-messages"></i>
+                    <input type="email" id="email" name="email" required>
+                 </div>
+                 
+                 <div class="password same">
+                    <label for="password">Password :</label>
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="password" name="password" required>
+                 </div>
+
+                 <div class="submit">
+                   <input type="submit" name="submit" id="submit" value="Start">
+                 </div>
+            </form>
+        </div>
+
+        <div class="content-right">
+            <img src="back.jfif">
+        </div>
+
+        <div class="pop-up">
+            <img src="tick.jfif">
+            <div class="pop-content">
+                <h3>Thank You!</h3>
+                <p>Your details has been successfully submitted. Thanks!</p>
+    
+                <button onclick="closePopup()">OK</button>
+            </div>
+            
+
+    </div>
+    </div>
+   
+    <script>
+
+        const form = document.querySelector('form')
+        const firstName = document.getElementById("firstName");
+        const lastName = document.getElementById("lastName");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const submit = document.getElementById("submit");
+        const popUp = document.querySelector('.pop-up')
+
+        function openPopup(){
+            if(firstName.value==='' || lastName.value =='' || email.value =='' || password.value == ''){
+                    alert("Please fill all fields");
+            }else{
+                    popUp.classList.remove('pop-up')
+                    popUp.classList.add("open-popup");
+            }
+            
+        }
+
+        
+        function closePopup(){
+            popUp.classList.add("close-popup")
+        }
+
+        form.addEventListener('submit',(e)=>{
+            e.preventDefault()
+            openPopup()
+        })
+
+    </script>
+</body>
+</html>

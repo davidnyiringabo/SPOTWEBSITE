@@ -1,0 +1,122 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+     justify-content: center;
+    align-items: center; 
+    background-color:  rgba(243, 245, 249, 1);
+    overflow: hidden;
+}
+
+.container{
+    width: 27%;
+    height: 75%;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    margin-top: 3.6rem;
+    /* align-items: center; */
+
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+}
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.upper-photo{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: flex-start;
+}
+
+img{
+    width: 100%;
+    height: 90%;
+}
+
+.input{
+    width: 87%;
+    height: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgba(16, 70, 102, 1);
+    margin-top: 7px;
+    font-size: 100%;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+.email:focus, .password:focus {
+    color: rgba(16, 70, 102, 1);;
+    outline: none;
+    border-color: purple;
+
+}
+
+.email:hover, .password:hover {
+    color: rgb(5, 152, 237);;
+    outline: none;
+    border-color: rgb(54, 24, 54);
+    margin-top: 5px;
+    
+}
+
+
+.email, .password{
+    width: 100%;
+    /* height: ; */
+    font-size: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 3px;
+
+}
+.submit{
+    width: 21%;
+    height: 6vh;
+    background-color: rgba(78, 102, 142, 1);
+    border: none;
+    border-radius: 2px;
+    margin-top: 14px;
+    color: #fff;
+    font-size: 90%;
+    font-weight: 600;
+    font-family:'Courier New', Courier, monospace;
+}
+.submit:hover{
+    outline: auto;
+    border-color: purple;
+    cursor: pointer;
+    border: 4px;
+}
+h6{
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 75%;
+}
+h6 a{
+    text-decoration: none;
+    color: rgba(20, 168, 216, 1);
+}
+h6 a:hover{
+    text-decoration: underline;
+}
+h1{
+    color: rgba(78, 102, 142, 1);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
